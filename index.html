@@ -5,10 +5,31 @@
   <style>
     body {
       background-color: #F5F5FF; /* Very light pastel blue */
+      display: flex; /* Enable flexbox layout */
+    }
+
+    .sidebar {
+      background-color: #eee; /* Light gray background for sidebar */
+      width: 200px; /* Set sidebar width */
+      padding: 20px; /* Add some padding for content */
+      margin-right: 20px; /* Add margin for spacing */
+    }
+
+    .sidebar a {
+      text-decoration: none; /* Remove underline from links */
+      color: black; /* Set link color */
+    }
+
+    .sidebar a:hover {
+      color: #333; /* Change link color on hover */
+    }
+
+    .main-content {
+      flex: 1; /* Take up remaining space */
     }
 
     .profile-photo {
-      float: left;
+      float: left; /* Not needed anymore due to flexbox */
       margin-right: 20px;
       margin-top: 10px;
       border-radius: 50%;
@@ -24,16 +45,27 @@
     <img class="profile-photo" src="images/foto.jpg" alt="Your Profile Photo">
   </a>
 
-  <h1>Welcome to My Website!</h1>
-  <p>This is a brief introduction to my website. Feel free to explore the content and learn more about me and my interests.</p>
+  <div class="sidebar">
+    <h2>My Website</h2>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Repositories</a></li>  <li><a href="#">Contact</a></li>
+      <li><a href="#">**Fake Link** (This won't go anywhere)</a></li>  </ul>
+  </div>
 
-  <p>Here are some key points about my website:</p>
-  <ul>
-    <li>**About Me:** Learn about my background, skills, and experiences.</li>
-    <li>**Projects:** Discover my latest projects and accomplishments.</li>
-    <li>**Contact:** Get in touch with me for inquiries or collaborations.</li>
-  </ul>
+  <div class="main-content">
+    <h1>Welcome to My Website!</h1>
+    <p>This is a brief introduction to my website. Feel free to explore the content and learn more about me and my interests.</p>
 
-  <p>Thank you for visiting!</p>
+    <p>Here are some key points about my website:</p>
+    <ul>
+      <li>**About Me:** Learn about my background, skills, and experiences.</li>
+      <li>**Projects:** Discover my latest projects and accomplishments.</li>
+      <li>**Contact:** Get in touch with me for inquiries or collaborations.</li>
+    </ul>
+
+    <p>Thank you for visiting!</p>
+  </div>
 </body>
 </html>
