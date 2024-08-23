@@ -6,18 +6,39 @@
     body {
       background-color: #F5F5FF; /* Very light pastel blue */
       display: flex; /* Enable flexbox layout */
+      justify-content: center; /* Center the content horizontally */
+      padding: 20px; /* Add some padding around the content */
+    }
+
+    .sidebar-container {
+      display: flex; /* Create a flex container for the profile photo and sidebar */
+      flex-direction: column; /* Arrange items vertically */
+      align-items: center; /* Center items in the sidebar */
+      margin-right: 20px; /* Add space between sidebar and main content */
+    }
+
+    .profile-photo {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      object-position: center top; /* Adjust the position of the image */
+      cursor: pointer; /* Set cursor to pointer on hover */
+      margin-bottom: 20px; /* Add space between photo and sidebar */
     }
 
     .sidebar {
       background-color: #eee; /* Light gray background for sidebar */
       width: 200px; /* Set sidebar width */
       padding: 20px; /* Add some padding for content */
-      margin-right: 20px; /* Add margin for spacing */
+      text-align: center; /* Center text within the sidebar */
     }
 
     .sidebar a {
       text-decoration: none; /* Remove underline from links */
       color: black; /* Set link color */
+      display: block; /* Ensure links take up full width */
+      margin: 10px 0; /* Add space between links */
     }
 
     .sidebar a:hover {
@@ -25,33 +46,27 @@
     }
 
     .main-content {
-      flex: 1; /* Take up remaining space */
-    }
-
-    .profile-photo {
-      float: left; /* Not needed anymore due to flexbox */
-      margin-right: 20px;
-      margin-top: 10px;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      cursor: pointer; /* Set cursor to pointer on hover */
+      max-width: 600px; /* Limit the width of the main content */
+      flex: 1; /* Allow main content to take up remaining space */
+      text-align: left; /* Align text to the left */
     }
   </style>
 </head>
 <body>
-  <a href="https://www.linkedin.com/in/matheushbps/" target="_blank">
-    <img class="profile-photo" src="images/foto.jpg" alt="Your Profile Photo">
-  </a>
-
-  <div class="sidebar">
-    <h2>My Website</h2>
-    <ul>
-      <li><a href="#">About Me</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Repositories</a></li>  <li><a href="#">Contact</a></li>
-      <li><a href="#">**Fake Link** (This won't go anywhere)</a></li>  </ul>
+  <div class="sidebar-container">
+    <a href="https://www.linkedin.com/in/matheushbps/" target="_blank">
+      <img class="profile-photo" src="images/foto.jpg" alt="Your Profile Photo">
+    </a>
+    <div class="sidebar">
+      <h2>My Website</h2>
+      <ul>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Repositories</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">**Fake Link** (This won't go anywhere)</a></li>
+      </ul>
+    </div>
   </div>
 
   <div class="main-content">
